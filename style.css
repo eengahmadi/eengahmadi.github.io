@@ -1,0 +1,54 @@
+/* Basic Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Makes the body take up the full screen height */
+    font-family: sans-serif;
+}
+
+/* 1. Styling the Video Background */
+#background-video {
+    position: fixed; /* Stays in place even when scrolling */
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100; /* Pushes the video to the very back */
+    object-fit: cover; /* Ensures the video covers the whole screen without distortion */
+}
+
+/* 2. Styling the Content Layer */
+.content {
+    position: relative; /* Needed so the content sits above the video */
+    z-index: 10; /* Puts the text layer above the video */
+    color: white; /* Text color */
+    text-align: center;
+    padding-top: 20%; /* Adjust this padding based on how much video you want to show */
+    min-height: 100vh; /* Ensure the content takes up the full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff6b6b; /* A nice contrasting color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #ff4d4d;
+}
