@@ -1,14 +1,14 @@
-/* Basic Reset */
+/* --- General Setup --- */
 body, html {
     margin: 0;
     padding: 0;
-    height: 100%; /* Makes the body take up the full screen height */
-    font-family: sans-serif;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
 }
 
-/* 1. Styling the Video Background */
+/* --- Video Background Setup --- */
 #background-video {
-    position: fixed; /* Stays in place even when scrolling */
+    position: fixed; 
     right: 0;
     bottom: 0;
     min-width: 100%;
@@ -16,33 +16,57 @@ body, html {
     width: auto;
     height: auto;
     z-index: -100; /* Pushes the video to the very back */
-    object-fit: cover; /* Ensures the video covers the whole screen without distortion */
+    object-fit: cover; /* Ensures the video covers the whole screen */
 }
 
-/* 2. Styling the Content Layer */
-.content {
-    position: relative; /* Needed so the content sits above the video */
-    z-index: 10; /* Puts the text layer above the video */
-    color: white; /* Text color */
-    text-align: center;
-    padding-top: 20%; /* Adjust this padding based on how much video you want to show */
-    min-height: 100vh; /* Ensure the content takes up the full viewport height */
+/* --- Content Layer --- */
+.content-wrapper {
+    /* This container holds all the sections and sits above the video */
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+}
+
+.section {
+    padding: 10vh 5%; /* Adds vertical padding to each section */
+    min-height: 100vh; /* Makes sure each section takes up at least the full screen height */
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: white; /* Default text color */
 }
 
-.content h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
+/* --- Specific Section Styling --- */
+
+/* Hero Section Styling */
+#hero {
+    /* Optional: You might want to make the hero section stand out */
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    padding-top: 15vh; /* Give the hero space */
+}
+
+/* About and Projects Section Styling */
+#about, #projects {
+    background-color: rgba(0, 0, 0, 0.6); /* Slightly darker background for contrast */
+    padding: 100px 5%;
+}
+
+/* --- Text and Buttons Styling --- */
+.content {
+    /* Center text within each section */
+    max-width: 800px;
+}
+
+.content h1, .content h2 {
+    margin-bottom: 15px;
 }
 
 .cta-button {
     display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #ff6b6b; /* A nice contrasting color */
+    margin-top: 25px;
+    padding: 12px 25px;
+    background-color: #00bcd4; /* A nice bright color */
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -50,5 +74,5 @@ body, html {
 }
 
 .cta-button:hover {
-    background-color: #ff4d4d;
+    background-color: #008ba3;
 }
