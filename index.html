@@ -33,19 +33,38 @@
         </section>
 
         <!-- PROJECTS SECTION (This is the target for the link) -->
-        <section id="projects" class="section">
-            <div class="content">
-                <h2>My Portfolios</h2>
-                <p>Check out some of the work I have done:</p>
-                <!-- You would add your project cards here later -->
-                <ul>
-                    <li>Project 1 (Coming Soon)</li>
-                    <li>Project 2 (Coming Soon)</li>
-                </ul>
-            </div>
-        </section>
+       <section id="projects" class="section">
+    <div class="content">
+        <h2>My Projects Showcase</h2>
+        
+        <!-- PROJECT 1: Clickable Trigger -->
+        <div class="project-item">
+            <h3>Project Alpha</h3>
+            <p>A description of Project Alpha.</p>
+            <!-- The button that triggers the video -->
+            <button class="play-button" data-video-src="video1.mp4">Play Project Video</button>
+            
+            <!-- The video that will be shown -->
+            <video class="project-video" id="video1" src="video1.mp4" poster="thumbnail1.jpg"></video>
+        </div>
+
+        <!-- PROJECT 2: Clickable Trigger -->
+        <div class="project-item">
+            <h3>Project Beta</h3>
+            <p>A description of Project Beta.</p>
+            <button class="play-button" data-video-src="BG_video.mp4">Play Project Video</button>
+            <video class="project-video" id="video2" src="BG_video.mp4" poster="thumbnail2.jpg"></video>
+        </div>
+
+    </div>
+</section>
 
     </div>
 
+<!-- ... (End of all your content) ... -->
+
+    <!-- 4. LINK THE JAVASCRIPT FILE -->
+    <script src="script.js"></script> 
 </body>
 </html>
+
