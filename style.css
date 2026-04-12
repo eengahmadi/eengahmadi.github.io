@@ -76,3 +76,39 @@ body, html {
 .cta-button:hover {
     background-color: #008ba3;
 }
+
+/* ... (Keep your previous CSS for background, body, and sections) ... */
+
+/* --- Project Styling --- */
+.project-item {
+    border: 2px solid #333;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white box */
+    text-align: center;
+}
+
+.play-button {
+    background-color: #4CAF50; /* Green button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.play-button:hover {
+    background-color: #45a049;
+}
+
+.project-video {
+    display: none; /* CRUCIAL: Hides the video by default */
+    width: 100%;
+    height: 300px; /* Set a fixed height for consistency */
+    margin-top: 15px;
+    border-radius: 5px;
+    object-fit: cover; /* Ensures the video fits nicely */
+}
+
