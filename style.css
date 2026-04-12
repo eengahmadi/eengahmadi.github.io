@@ -19,23 +19,38 @@ body, html {
     object-fit: cover; /* Ensures the video covers the whole screen */
 }
 
-/* --- Content Layer --- */
+/* --- CONTENT LAYER (Stays readable on top) --- */
 .content-wrapper {
-    /* This container holds all the sections and sits above the video */
     position: relative;
-    z-index: 10;
+    z-index: 10;       /* Must be above video */
     min-height: 100vh;
-}
-
-.section {
-    padding: 10vh 5%; /* Adds vertical padding to each section */
-    min-height: 100vh; /* Makes sure each section takes up at least the full screen height */
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white; /* Default text color */
+    padding: 20px;
+/* --- SECTION LAYOUT (Mobile-friendly padding) --- */
+.section {
+    padding: 0 20px;    /* Horizontal breathing room on mobile */
+    margin: 0 auto;     /* Centers content horizontally */
+    width: 100%;
+    max-width: 800px;   /* Prevents overflow on large screens */
+    box-sizing: border-box;
 }
 
+/* --- MOBILE-SPECIFIC ADJUSTMENTS --- */
+@media (max-width: 768px) {
+    .section {
+        padding: 0 15px;
+        font-size: 1.2rem;
+    }
+    .content h1, .content h2 {
+        font-size: 1.8rem;
+    }
+    .project-video {
+        height: 200px;   /* Smaller video player on mobile */
+    }
+}
 /* --- Specific Section Styling --- */
 
 /* Hero Section Styling */
@@ -76,8 +91,6 @@ body, html {
 .cta-button:hover {
     background-color: #008ba3;
 }
-
-/* ... (Keep your previous CSS for background, body, and sections) ... */
 
 /* --- Project Styling --- */
 .project-item {
