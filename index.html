@@ -3,22 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> VFX Portfolios </title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to our new CSS file -->
+    <title>My Portfolio Landing Page</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- THE VIDEO ELEMENT -->
+    <!-- 1. VIDEO BACKGROUND -->
     <video autoplay muted loop id="background-video">
-        <!-- IMPORTANT: Change 'your-video.mp4' to the name of your video file -->
         <source src="BG_video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
     </video>
 
-    <!-- THE CONTENT LAYER (This sits on top of the video) -->
-    <div class="content">
-        <h1>Eeng's Portfolio</h1>
-        <p>3d Generalist | Realtime VFX artist | Problem Solver</p>
-        <a href="#projects" class="cta-button">View My Work</a>
+    <!-- 2. THE MAIN CONTENT CONTAINER -->
+    <div class="content-wrapper">
+        
+        <!-- HERO SECTION (The top part visible immediately) -->
+        <section id="hero" class="section">
+            <div class="content">
+                <h1>Hello! I'm [Your Name]</h1>
+                <p>A Creative Developer and Portfolio Builder.</p>
+                <a href="#projects" class="cta-button">View My Work</a>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION (This is where we need a target ID) -->
+        <section id="about" class="section">
+            <div class="content">
+                <h2>About Me</h2>
+                <p>I am passionate about creating beautiful and functional websites. I specialize in turning ideas into functional code.</p>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION (This is the target for the link) -->
+        <section id="projects" class="section">
+            <div class="content">
+                <h2>My Projects</h2>
+                <p>Check out some of the work I have done:</p>
+                <!-- You would add your project cards here later -->
+                <ul>
+                    <li>Project 1 (Coming Soon)</li>
+                    <li>Project 2 (Coming Soon)</li>
+                </ul>
+            </div>
+        </section>
+
     </div>
+
 </body>
 </html>
