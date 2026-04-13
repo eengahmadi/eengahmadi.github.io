@@ -1,38 +1,40 @@
-/* --- 1. GLOBAL SETUP & BACKGROUND COLOR --- */
+/* --- GLOBAL SETUP & BACKGROUND COLOR --- */
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
     font-family: 'Arial', sans-serif;
-    
-    /* === APPLYING YOUR CUSTOM COLOR HERE === */
-    background-color: #ede5de; /* Your desired soft light color */
+    background-color: #ede5de; /* Your soft light color */
 }
 
-/* --- 2. VIDEO BACKGROUND SETUP (Small Frame) --- */
+/* --- VIDEO BACKGROUND SETUP (Small Frame) --- */
 #background-video {
-    position: fixed; 
-    right: 20px; /* Position from the right edge */
-    bottom: 20px; /* Position from the bottom edge */
-    width: 300px;  /* Fixed width for the video frame */
-    height: 200px; /* Fixed height for the video frame */
-    object-fit: cover; /* Ensures the video fills the box without stretching */
-    z-index: -100;    /* Pushes the video to the very back */
+    position: fixed; /* Locks it to the viewport */
+    right: 20px;      /* Margin from the right edge */
+    bottom: 20px;     /* Margin from the bottom edge */
+    
+    /* Define the exact dimensions of the video frame */
+    width: 480px;     /* Exact width of your video */
+    height: 270px;    /* Exact height of your video */
+    
+    object-fit: cover; /* Ensures the video fills this defined box without stretching */
+    z-index: -100;    /* Pushes the video behind all other content */
 }
 
-/* --- CONTENT LAYER (Stays readable on top) --- */
+/* --- CONTENT LAYER (Ensure Text is Visible) --- */
 .content-wrapper {
     position: relative;
-    z-index: 10;       /* Must be above video */
+    z-index: 10; /* Puts the content firmly above the video */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 40px 20px; /* Add padding around the text */
+}
 /* --- SECTION LAYOUT (Mobile-friendly padding) --- */
 .section {
-    padding: 0 20px;    /* Horizontal breathing room on mobile */
+    padding: 50px 20px;    /* Horizontal breathing room on mobile */
     margin: 0 auto;     /* Centers content horizontally */
     width: 100%;
     max-width: 800px;   /* Prevents overflow on large screens */
