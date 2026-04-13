@@ -17,7 +17,7 @@ body, html {
     width: 480px;     /* Exact width of your video */
     height: 270px;    /* Exact height of your video */
     
-    object-fit: cover; /* Ensures the video fills this defined box without stretching */
+    object-fit: contain; /* Ensures the video fills this defined box without stretching */
     z-index: -100;    /* Pushes the video behind all other content */
 }
 
